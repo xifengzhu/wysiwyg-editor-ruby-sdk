@@ -25,7 +25,7 @@ module FroalaEditorSDK
       all_images = []
 
       images.each do |img|
-        all_images.push({url: "#{"/uploads/"}#{Utils.get_file_name(img)}"})
+        all_images.push({url: "#{img.gsub('public', '')}"})
       end
 
       return all_images.to_json
